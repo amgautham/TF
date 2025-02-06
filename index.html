@@ -5,151 +5,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechFest</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Neo-Brutalism Styles */
+        .neo-brutalism-box {
+            box-shadow: 4px 4px 0px black;
+            /* Strong, visible shadow */
+            border: 2px solid black;
+            /* Thick border */
+        }
+
+        .neo-brutalism-button {
+            box-shadow: 3px 3px 0px black;
+            border: 2px solid black;
+            transition: all 0.2s ease;
+            /* Smooth transitions */
+        }
+
+        .neo-brutalism-button:hover {
+            box-shadow: 5px 5px 0px black;
+            /* Larger shadow on hover */
+            transform: translate(-2px, -2px);
+            /* Move slightly on hover */
+
+        }
+
+        .neo-brutalism-button:active {
+            box-shadow: 1px 1px 0px black;
+            transform: translate(1px, 1px);
+        }
+
+        .neo-brutalism-card {
+            box-shadow: 4px 4px 0px black;
+            border: 2px solid black;
+            transition: all 0.2s ease;
+        }
+
+        .neo-brutalism-card:hover {
+            box-shadow: 6px 6px 0px black;
+            transform: translate(-2px, -2px);
+        }
+    </style>
 </head>
 
-<body>
+<body class="bg-[#f8f4d8] font-sans">
 
-    <header>
-        <h1>TechFest</h1>
-        <div class="menu-icon">&#9776;</div>
+    <header class="flex items-center justify-between p-4 bg-[#f8f4d8] font-bold neo-brutalism-box">
+        <h1 class="text-2xl md:text-3xl">TechFest</h1>
+        <div class="menu-icon text-3xl cursor-pointer">&#9776;</div>
     </header>
 
-    <section class="banner">
-        <h2>Unleash Your Inner Geek</h2>
-        <p>Join us for the ultimate Tech Fest, where computer whizzes, civil engineers, and electronic enthusiasts
-            collide in a spectacular showcase of innovation and creativity!</p>
-        <button class="btn-purple">Get Tickets</button>
+
+
+    <section
+        class="banner bg-[url('https://www.transparenttextures.com/patterns/foggy-birds.png'),linear-gradient(to_right,#004aad,#000048)] text-white p-6 md:p-10 rounded-lg mx-4 md:mx-20 my-4 md:my-10 text-center neo-brutalism-box">
+        <h2 class="text-2xl md:text-4xl">Unleash Your Inner Geek</h2>
+        <p class="text-base md:text-lg">Join us for the ultimate Tech Fest, where computer whizzes, civil engineers, and
+            electronic enthusiasts collide in a spectacular showcase of innovation and creativity!</p>
+        <button
+            class="btn-purple bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded-lg mt-4 border-2 border-black neo-brutalism-button">
+            Get Tickets
+        </button>
     </section>
 
-    <section class="info-box">
-        <h2>Where Tech Meets Fun</h2>
-        <p>Dive into a world of electrifying talks, hands-on workshops, and mind-blowing exhibits that will leave you
-            buzzing with excitement!</p>
-        <button class="btn-blue">Explore More</button>
+    <section
+        class="info-box bg-[#ffcc00] p-6 md:p-10 rounded-lg mx-4 md:mx-20 my-4 md:my-10 text-center neo-brutalism-box">
+        <h2 class="text-xl md:text-3xl">Where Tech Meets Fun</h2>
+        <p class="text-base md:text-lg">Dive into a world of electrifying talks, hands-on workshops, and mind-blowing
+            exhibits that will leave you buzzing with excitement!</p>
+        <button
+            class="btn-blue bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded-lg mt-4 border-2 border-black neo-brutalism-button">
+            Explore More
+        </button>
     </section>
 
-    <div class="faq-box">
-        <h1>Got Questions?</h1>
-        <p>We’ve got answers! Check out our FAQs to clear your doubts and get ready for the fest!</p>
+    <div class="faq-box bg-[#ffcc00] p-4 md:p-8 rounded-lg mx-4 md:mx-20 my-4 md:my-10 text-left neo-brutalism-box">
+        <h1 class="text-xl md:text-2xl mb-2">Got Questions?</h1>
+        <p class="text-base md:text-lg mb-4">We’ve got answers! Check out our FAQs to clear your doubts and get ready
+            for
+            the fest!</p>
 
-        <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-item bg-[#fff8d6] border-2 border-black rounded-lg p-4 my-2 cursor-pointer flex justify-between items-center font-bold text-base md:text-lg hover:bg-[#fff3b0] neo-brutalism-card"
+            onclick="toggleFAQ(this)">
             <span>What is Tech Fest?</span>
-            <span class="toggle-symbol">+</span>
-            <p class="faq-answer">Tech Fest is an annual event showcasing technology, innovation, and competitions for
-                students and professionals.</p>
+            <span class="toggle-symbol text-2xl">+</span>
+            <p class="faq-answer hidden mt-2 font-normal">Tech Fest is an annual event showcasing technology,
+                innovation,
+                and competitions for students and professionals.</p>
         </div>
 
-        <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-item bg-[#fff8d6] border-2 border-black rounded-lg p-4 my-2 cursor-pointer flex justify-between items-center font-bold text-base md:text-lg hover:bg-[#fff3b0] neo-brutalism-card"
+            onclick="toggleFAQ(this)">
             <span>Who can attend?</span>
-            <span class="toggle-symbol">+</span>
-            <p class="faq-answer">Tech Fest is open to students, faculty, professionals, and technology enthusiasts of
+            <span class="toggle-symbol text-2xl">+</span>
+            <p class="faq-answer hidden mt-2 font-normal">Tech Fest is open to students, faculty, professionals, and
+                technology enthusiasts of
                 all backgrounds.</p>
         </div>
 
-        <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-item bg-[#fff8d6] border-2 border-black rounded-lg p-4 my-2 cursor-pointer flex justify-between items-center font-bold text-base md:text-lg hover:bg-[#fff3b0] neo-brutalism-card"
+            onclick="toggleFAQ(this)">
             <span>When is it happening?</span>
-            <span class="toggle-symbol">+</span>
-            <p class="faq-answer">The event is scheduled to take place from March 15-17, 2025.</p>
+            <span class="toggle-symbol text-2xl">+</span>
+            <p class="faq-answer hidden mt-2 font-normal">The event is scheduled to take place from March 15-17, 2025.
+            </p>
         </div>
 
-        <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-item bg-[#fff8d6] border-2 border-black rounded-lg p-4 my-2 cursor-pointer flex justify-between items-center font-bold text-base md:text-lg hover:bg-[#fff3b0] neo-brutalism-card"
+            onclick="toggleFAQ(this)">
             <span>Where is it located?</span>
-            <span class="toggle-symbol">+</span>
-            <p class="faq-answer">The Tech Fest will be held at XYZ College, in the main auditorium and various tech
+            <span class="toggle-symbol text-2xl">+</span>
+            <p class="faq-answer hidden mt-2 font-normal">The Tech Fest will be held at XYZ College, in the main
+                auditorium and various tech
                 labs.</p>
         </div>
 
-        <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-item bg-[#fff8d6] border-2 border-black rounded-lg p-4 my-2 cursor-pointer flex justify-between items-center font-bold text-base md:text-lg hover:bg-[#fff3b0] neo-brutalism-card"
+            onclick="toggleFAQ(this)">
             <span>Are there age restrictions?</span>
-            <span class="toggle-symbol">+</span>
-            <p class="faq-answer">No, Tech Fest is open to all age groups, from students to industry professionals.</p>
+            <span class="toggle-symbol text-2xl">+</span>
+            <p class="faq-answer hidden mt-2 font-normal">No, Tech Fest is open to all age groups, from students to
+                industry professionals.</p>
         </div>
 
-        <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-item bg-[#fff8d6] border-2 border-black rounded-lg p-4 my-2 cursor-pointer flex justify-between items-center font-bold text-base md:text-lg hover:bg-[#fff3b0] neo-brutalism-card"
+            onclick="toggleFAQ(this)">
             <span>How can I volunteer?</span>
-            <span class="toggle-symbol">+</span>
-            <p class="faq-answer">You can sign up for volunteering on our official website under the "Get Involved"
+            <span class="toggle-symbol text-2xl">+</span>
+            <p class="faq-answer hidden mt-2 font-normal">You can sign up for volunteering on our official website under
+                the "Get Involved"
                 section.</p>
         </div>
+
     </div>
 
 
-    <div class="features-box">
-        <h1>Exciting Features Await</h1>
-        <div class="buttons-container">
-            <button class="feature-btn" onclick="showFeature('workshops', this)">Workshops</button>
-            <button class="feature-btn" onclick="showFeature('panels', this)">Panels</button>
-            <button class="feature-btn" onclick="showFeature('exhibits', this)">Exhibits</button>
-            <button class="feature-btn" onclick="showFeature('competitions', this)">Competitions</button>
-            <button class="feature-btn" onclick="showFeature('networking', this)">Networking</button>
-        </div>
-
-        <div id="workshops" class="feature-content">
-            <h2>Workshops</h2>
-            <p>Engage in hands-on sessions with industry experts and gain practical skills.</p>
-        </div>
-
-        <div id="panels" class="feature-content">
-            <h2>Panels</h2>
-            <p>Join discussions with professionals sharing insights on the latest trends.</p>
-        </div>
-
-        <div id="exhibits" class="feature-content active">
-            <h2>Exhibits</h2>
-            <p>Explore innovative exhibits showcasing cutting-edge projects from students and professionals alike.
-                Prepare to be amazed by what the future holds!</p>
-        </div>
-
-        <div id="competitions" class="feature-content">
-            <h2>Competitions</h2>
-            <p>Challenge yourself with coding, robotics, and problem-solving contests.</p>
-        </div>
-
-        <div id="networking" class="feature-content">
-            <h2>Networking</h2>
-            <p>Connect with peers, mentors, and professionals to expand your opportunities.</p>
-        </div>
-    </div>
-
-
-
-</body>
-
-<script>
-    function toggleFAQ(faqItem) {
-        const answer = faqItem.querySelector('.faq-answer');
-        const symbol = faqItem.querySelector('.toggle-symbol');
-
-        if (faqItem.classList.contains('open')) {
-            answer.style.display = 'none';
-            symbol.innerText = '+';
-            faqItem.classList.remove('open');
-        } else {
-            answer.style.display = 'block';
-            symbol.innerText = '-';
-            faqItem.classList.add('open');
-        }
-    }
-
-    function showFeature(featureId, btn) {
-        // Hide all feature contents
-        document.querySelectorAll('.feature-content').forEach(content => {
-            content.classList.remove('active');
-        });
-
-        // Show the selected feature content
-        document.getElementById(featureId).classList.add('active');
-
-        // Reset all button styles
-        document.querySelectorAll('.feature-btn').forEach(button => {
-            button.classList.remove('selected');
-        });
-
-        // Highlight the clicked button
-        btn.classList.add('selected');
-    }
-
-</script>
-
-</html>
+    <div
+        class="features-box bg-[#ffcc00] p-4 md:p-8 rounded-lg mx-4 md:mx-20 my-4 md:my-10 text-left neo-brutalism-box">
+        <h1 class="text-xl md:text-2xl mb-4">Exciting Features Await</h1>

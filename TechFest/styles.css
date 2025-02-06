@@ -1,0 +1,203 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f4d8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f4d8;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Banner Section */
+.banner {
+    background: url('https://www.transparenttextures.com/patterns/foggy-birds.png'), linear-gradient(to right, #004aad, #000048);
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.banner h2 {
+    font-size: 36px;
+}
+
+.banner p {
+    font-size: 18px;
+}
+
+.btn-purple {
+    background-color: purple;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    border: 3px solid black;
+}
+
+.btn-purple:hover {
+    background-color: #800080;
+}
+
+/* Info Box */
+.info-box {
+    background-color: #ffcc00;
+    padding: 30px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.info-box h2 {
+    font-size: 32px;
+}
+
+.info-box p {
+    font-size: 18px;
+}
+
+.btn-blue {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    border: 3px solid black;
+}
+
+.btn-blue:hover {
+    background-color: #0056b3;
+}
+
+
+
+.faq-box {
+    background-color: #ffcc00;
+    padding: 20px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+}
+
+.faq-item {
+    background-color: #fff8d6;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.faq-item:hover {
+    background-color: #fff3b0;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.faq-item.open .faq-answer {
+    display: block;
+}
+
+.faq-item span {
+    font-size: 24px;
+}
+
+.feature-box {
+    background-color: #ffcc00;
+    padding: 20px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+}
+
+
+.features-box {
+    background-color: #ffcc00;
+    padding: 20px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+}
+
+.features-box h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.feature-btn {
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 30px;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 3px 3px black;
+    transition: all 0.2s ease-in-out;
+}
+
+.feature-btn:active,
+.feature-btn.selected {
+    background-color: #ffcc00;
+    box-shadow: none;
+    transform: translate(3px, 3px);
+}
+
+.feature-content {
+    display: none;
+    margin-top: 10px;
+}
+
+.feature-content.active {
+    display: block;
+}
+
+.feature-content h2 {
+    margin-bottom: 5px;
+}
+
+.feature-content p {
+    font-size: 16px;
+}

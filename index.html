@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechFest</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
     <header>
@@ -15,54 +17,60 @@
 
     <section class="banner">
         <h2>Unleash Your Inner Geek</h2>
-        <p>Join us for the ultimate Tech Fest, where computer whizzes, civil engineers, and electronic enthusiasts collide in a spectacular showcase of innovation and creativity!</p>
+        <p>Join us for the ultimate Tech Fest, where computer whizzes, civil engineers, and electronic enthusiasts
+            collide in a spectacular showcase of innovation and creativity!</p>
         <button class="btn-purple">Get Tickets</button>
     </section>
 
     <section class="info-box">
         <h2>Where Tech Meets Fun</h2>
-        <p>Dive into a world of electrifying talks, hands-on workshops, and mind-blowing exhibits that will leave you buzzing with excitement!</p>
+        <p>Dive into a world of electrifying talks, hands-on workshops, and mind-blowing exhibits that will leave you
+            buzzing with excitement!</p>
         <button class="btn-blue">Explore More</button>
     </section>
 
     <div class="faq-box">
         <h1>Got Questions?</h1>
         <p>We’ve got answers! Check out our FAQs to clear your doubts and get ready for the fest!</p>
-    
+
         <div class="faq-item" onclick="toggleFAQ(this)">
             <span>What is Tech Fest?</span>
             <span class="toggle-symbol">+</span>
-            <p class="faq-answer">Tech Fest is an annual event showcasing technology, innovation, and competitions for students and professionals.</p>
+            <p class="faq-answer">Tech Fest is an annual event showcasing technology, innovation, and competitions for
+                students and professionals.</p>
         </div>
-    
+
         <div class="faq-item" onclick="toggleFAQ(this)">
             <span>Who can attend?</span>
             <span class="toggle-symbol">+</span>
-            <p class="faq-answer">Tech Fest is open to students, faculty, professionals, and technology enthusiasts of all backgrounds.</p>
+            <p class="faq-answer">Tech Fest is open to students, faculty, professionals, and technology enthusiasts of
+                all backgrounds.</p>
         </div>
-    
+
         <div class="faq-item" onclick="toggleFAQ(this)">
             <span>When is it happening?</span>
             <span class="toggle-symbol">+</span>
             <p class="faq-answer">The event is scheduled to take place from March 15-17, 2025.</p>
         </div>
-    
+
         <div class="faq-item" onclick="toggleFAQ(this)">
             <span>Where is it located?</span>
             <span class="toggle-symbol">+</span>
-            <p class="faq-answer">The Tech Fest will be held at XYZ College, in the main auditorium and various tech labs.</p>
+            <p class="faq-answer">The Tech Fest will be held at XYZ College, in the main auditorium and various tech
+                labs.</p>
         </div>
-    
+
         <div class="faq-item" onclick="toggleFAQ(this)">
             <span>Are there age restrictions?</span>
             <span class="toggle-symbol">+</span>
             <p class="faq-answer">No, Tech Fest is open to all age groups, from students to industry professionals.</p>
         </div>
-    
+
         <div class="faq-item" onclick="toggleFAQ(this)">
             <span>How can I volunteer?</span>
             <span class="toggle-symbol">+</span>
-            <p class="faq-answer">You can sign up for volunteering on our official website under the "Get Involved" section.</p>
+            <p class="faq-answer">You can sign up for volunteering on our official website under the "Get Involved"
+                section.</p>
         </div>
     </div>
 
@@ -76,70 +84,72 @@
             <button class="feature-btn" onclick="showFeature('competitions', this)">Competitions</button>
             <button class="feature-btn" onclick="showFeature('networking', this)">Networking</button>
         </div>
-    
+
         <div id="workshops" class="feature-content">
             <h2>Workshops</h2>
             <p>Engage in hands-on sessions with industry experts and gain practical skills.</p>
         </div>
-    
+
         <div id="panels" class="feature-content">
             <h2>Panels</h2>
             <p>Join discussions with professionals sharing insights on the latest trends.</p>
         </div>
-    
+
         <div id="exhibits" class="feature-content active">
             <h2>Exhibits</h2>
-            <p>Explore innovative exhibits showcasing cutting-edge projects from students and professionals alike. Prepare to be amazed by what the future holds!</p>
+            <p>Explore innovative exhibits showcasing cutting-edge projects from students and professionals alike.
+                Prepare to be amazed by what the future holds!</p>
         </div>
-    
+
         <div id="competitions" class="feature-content">
             <h2>Competitions</h2>
             <p>Challenge yourself with coding, robotics, and problem-solving contests.</p>
         </div>
-    
+
         <div id="networking" class="feature-content">
             <h2>Networking</h2>
             <p>Connect with peers, mentors, and professionals to expand your opportunities.</p>
         </div>
     </div>
-    
 
-    
+
+
 </body>
 
 <script>
     function toggleFAQ(faqItem) {
-    const answer = faqItem.querySelector('.faq-answer');
-    const symbol = faqItem.querySelector('.toggle-symbol');
+        const answer = faqItem.querySelector('.faq-answer');
+        const symbol = faqItem.querySelector('.toggle-symbol');
 
-    if (faqItem.classList.contains('open')) {
-        answer.style.display = 'none';
-        symbol.innerText = '+';
-        faqItem.classList.remove('open');
-    } else {
-        answer.style.display = 'block';
-        symbol.innerText = '-';
-        faqItem.classList.add('open');
+        if (faqItem.classList.contains('open')) {
+            answer.style.display = 'none';
+            symbol.innerText = '+';
+            faqItem.classList.remove('open');
+        } else {
+            answer.style.display = 'block';
+            symbol.innerText = '-';
+            faqItem.classList.add('open');
+        }
     }
-}
 
-function showFeature(featureId, btn) {
-    // Hide all feature contents
-    document.querySelectorAll('.feature-content').forEach(content => {
-        content.classList.remove('active');
-    });
+    function showFeature(featureId, btn) {
+        // Hide all feature contents
+        document.querySelectorAll('.feature-content').forEach(content => {
+            content.classList.remove('active');
+        });
 
-    // Show the selected feature content
-    document.getElementById(featureId).classList.add('active');
+        // Show the selected feature content
+        document.getElementById(featureId).classList.add('active');
 
-    // Reset all button styles
-    document.querySelectorAll('.feature-btn').forEach(button => {
-        button.classList.remove('selected');
-    });
+        // Reset all button styles
+        document.querySelectorAll('.feature-btn').forEach(button => {
+            button.classList.remove('selected');
+        });
 
-    // Highlight the clicked button
-    btn.classList.add('selected');
-}
+        // Highlight the clicked button
+        btn.classList.add('selected');
+    }
 
 </script>
+
 </html>

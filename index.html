@@ -9,14 +9,11 @@
     <style>
         /* Neo-Brutalism Styles */
         .neo-brutalism-box {
-            box-shadow: 4px 4px 0px black;
-            /* Strong, visible shadow */
             border: 2px solid black;
-            /* Thick border */
+            /* Thick border */  
         }
 
         .neo-brutalism-button {
-            box-shadow: 3px 3px 0px black;
             border: 2px solid black;
             transition: all 0.2s ease;
             /* Smooth transitions */
@@ -36,13 +33,13 @@
         }
 
         .neo-brutalism-card {
-            box-shadow: 4px 4px 0px black;
             border: 2px solid black;
             transition: all 0.2s ease;
         }
 
         .neo-brutalism-card:hover {
-            box-shadow: 6px 6px 0px black;
+            box-shadow: 5px 5px 0px black;
+            /* Shadow on card hover */
             transform: translate(-2px, -2px);
         }
     </style>
@@ -143,3 +140,81 @@
     <div
         class="features-box bg-[#ffcc00] p-4 md:p-8 rounded-lg mx-4 md:mx-20 my-4 md:my-10 text-left neo-brutalism-box">
         <h1 class="text-xl md:text-2xl mb-4">Exciting Features Await</h1>
+        <div class="buttons-container flex flex-col md:flex-row flex-wrap gap-4 mb-4">
+            <p class="text-base md:text-lg mb-4">Get ready for mind-blowing exhibits, hands-on workshops, and electrifying talks
+                that will leave you inspired and ready to take on the world of tech!</p>
+            
+            <div
+                class="feature-item bg-[#fff8d6] border-2 border-black rounded-lg p-4 my-2 flex justify-between items-center font-bold text-base md:text-lg hover:bg-[#fff3b0] neo-brutalism-card">
+                <span>Innovative Exhibits</span>
+                <span class="feature-symbol text-2xl">+</span>
+                <p class="feature-detail hidden mt-2 font-normal">Explore cutting-edge technology in robotics, AI, and more from top
+                    tech companies and innovators.</p>
+            </div>
+            
+            <div
+                class="feature-item bg-[#fff8d6] border-2 border-black rounded-lg p-4 my-2 flex justify-between items-center font-bold text-base md:text-lg hover:bg-[#fff3b0] neo-brutalism-card">
+                <span>Hands-On Workshops</span>
+                <span class="feature-symbol text-2xl">+</span>
+                <p class="feature-detail hidden mt-2 font-normal">Participate in engaging workshops where you can build your own
+                    projects and get practical experience.</p>
+            </div>
+            
+            <div
+                class="feature-item bg-[#fff8d6] border-2 border-black rounded-lg p-4 my-2 flex justify-between items-center font-bold text-base md:text-lg hover:bg-[#fff3b0] neo-brutalism-card">
+                <span>Keynote Speakers</span>
+                <span class="feature-symbol text-2xl">+</span>
+                <p class="feature-detail hidden mt-2 font-normal">Learn from industry leaders and innovators who will share insights
+                    on the latest trends in technology.</p>
+            </div>
+            
+            <div
+                class="feature-item bg-[#fff8d6] border-2 border-black rounded-lg p-4 my-2 flex justify-between items-center font-bold text-base md:text-lg hover:bg-[#fff3b0] neo-brutalism-card">
+                <span>Networking Opportunities</span>
+                <span class="feature-symbol text-2xl">+</span>
+                <p class="feature-detail hidden mt-2 font-normal">Meet like-minded professionals and students, share ideas, and
+                    build valuable connections for your career.</p>
+            </div>
+            </div>
+            
+            <footer class="bg-[#f8f4d8] p-6 md:p-10 text-center neo-brutalism-box">
+                <p class="text-base md:text-lg">&copy; 2025 TechFest. All rights reserved.</p>
+            </footer>
+            
+            <script>
+                // Toggle FAQ visibility
+                function toggleFAQ(element) {
+                    const answer = element.querySelector('.faq-answer');
+                    const symbol = element.querySelector('.toggle-symbol');
+                    if (answer.classList.contains('hidden')) {
+                        answer.classList.remove('hidden');
+                        symbol.textContent = '-';
+                    } else {
+                        answer.classList.add('hidden');
+                        symbol.textContent = '+';
+                    }
+                }
+
+                // Toggle feature detail visibility
+                function toggleFeature(element) {
+                    const detail = element.querySelector('.feature-detail');
+                    const symbol = element.querySelector('.feature-symbol');
+                    if (detail.classList.contains('hidden')) {
+                        detail.classList.remove('hidden');
+                        symbol.textContent = '-';
+                    } else {
+                        detail.classList.add('hidden');
+                        symbol.textContent = '+';
+                    }
+                }
+
+                // Attach toggleFeature to feature items
+                const featureItems = document.querySelectorAll('.feature-item');
+                featureItems.forEach(item => {
+                    item.addEventListener('click', () => toggleFeature(item));
+                });
+            </script>
+            
+            </body>
+            
+            </html>
